@@ -1,0 +1,173 @@
+@import url(reset.css);
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap');
+@font-face {font-family: "popins";font-display: swap;src: url("../fonts/popins/Poppins-Regular.ttf");}
+:root {--black: #000b0e;--white: #fff;--primary: #17404b;--secondary: #f7b432;--gray: #f7f7f7;--gray1: #595959;--shadow: 0px 0px 26px rgba(0, 0, 0, 0.16);}
+img {max-width: 100%;}
+svg {vertical-align: sub;}
+body {counter-reset: section;}
+
+.headingsFont{ font-family: "Barlow", sans-serif;}
+
+html {scroll-behavior: smooth;}
+
+/* common classes */
+.overlay.active {background: rgba(0, 0, 0, 0.8);position: fixed;display: block;width: 100%;height: 100%;z-index: 10;left: 0;top: 0;opacity: 70%;transition: all 0.4s ease-in-out;cursor: pointer;}
+.container {max-width: 1300px;margin: 0 auto; padding: 0 15px;}
+.sitePattern{ position: relative;
+  &::after{content: "";left: 0;top: -40px;min-height: 50px;width: 140px;background: url(../images/icons/pattern.png);position: absolute;z-index: -1;background-size: contain;background-repeat: no-repeat;}
+}
+.siteBtn{background: var(--secondary); color: var(--white); padding: 5px 8px; transition: all 0.2s ease; opacity: 0.9;
+  &:hover{opacity: 1;}
+}
+
+/*Navbar Start*/
+.header {position: fixed;left: 0;right: 0;top: 0;z-index: 99;padding: 5px 0;border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  .inner-header{align-items: center;}
+  &.active {background: var(--black);animation: slide-down 0.9s;}
+}
+
+.navmenu {margin: auto 0 auto auto; align-items: center;}
+.navmenu li {padding: 8px 10px;
+  &:last-child{padding-right: 0;}
+}
+.navmenu li a {font-size: 16px;color: var(--white);}
+
+.headerbtn{position: relative;font-weight: bold; background: var(--primary); display: flex; align-items: center; gap: 10px; padding-right: 10px;
+  .telIcon{padding: 10px 12px; background: var(--secondary);}
+}
+
+/*Navbar End*/
+
+/*Slider Start*/
+.banner-section{
+  .carousel{
+    img{filter: brightness(0.7); max-height: 90vh;}
+  }
+}
+.carausel_btn{position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; z-index: 2;
+  button{position: unset; background: url(../images/icons/arrows.png) no-repeat center center; background-size: 40px; width: 90px; height: 50px; background-color: var(--primary); opacity: 1;}
+  .carousel-control-prev{border-bottom: 1px solid var(--gray);}
+  .carousel-control-next{background-image: url(../images/icons/arrows1.png);}
+}
+.content-over-banner{text-transform: capitalize; position: absolute; bottom: 38%; z-index: 2; left: 0; right: 0; color: var(--white); 
+   .sitePattern{padding-left: 45px;
+    &::after{height: 347px;top: -29px;}
+  }
+  .projectname{font-size: 65px; letter-spacing: 2px; margin-bottom: 28px;}
+  .address{background: var(--primary); padding: 5px 12px;border-left: 2px solid var(--secondary);}
+  .typology{font-size: 32px; background: var(--primary); border-left: 2px solid var(--secondary); width: fit-content; margin: 28px 0; padding: 3px 10px;}
+  .price{ font-size: 20px; display: flex; gap: 0 8px; align-items: center;
+    p{font-size: 38px; color: var(--secondary); font-weight: 700; }
+    span{display: inline; border-left:2px solid var(--secondary); color: var(--white); background: var(--primary); width: fit-content; padding: 2px 8px;}
+  }
+}
+
+.highligt-and-siteForm{position: relative; top: -75px; z-index: 1;
+  .container{position: relative;}
+  .leftside{padding: 20px 25px;
+    li{margin-bottom: 8px; padding-left: 35px; background: url(../images/icons/icon.svg) no-repeat left center;}
+  }
+  .formHeading{font-size: 35px; margin-bottom: 15px; color: var(--white); text-align: center;}
+  .formdiv{padding: 35px; position: absolute; top: -280px; z-index: 2; right: 15px;
+    input{background: var(--white); color: var(--white); padding: 18px 15px; width: 100%; margin-bottom: 15px; color: var(--black);
+      &::placeholder{color: var(--black);}
+    }
+    .button{padding: 12px; width: 100%; font-size: 18px;}
+  }
+  .buttonsdiv{display: flex; justify-content: center; align-self: center; text-align: center;
+    .head{font-size: 45px; font-weight: 600;}
+    p{font-size: 18px;}
+  }
+}
+
+/* .banner-form */
+
+/*Slider And From End*/
+
+/*Overview Start*/
+
+
+/*Overview End*/
+
+/* .highlights-contaier */
+
+/* End .highlights-contaier */
+/*Price List Start*/
+
+/*Price List End*/
+
+/*Floor And Master Plan Start*/
+
+/*Floor And Master Plan End*/
+
+/*Amenities Start*/
+
+
+/*Amenities End*/
+
+/*Location Start*/
+
+/*Location End*/
+
+/*Gallery Start*/
+
+/*Gallery End*/
+
+/* contact - Form section */
+
+/*End contact - Form section */
+
+/* Start .sitefooter */
+
+/* End .sitefooter */
+
+/* mobile-section-footer */
+.mobile-section-footer {display: none;position: fixed;z-index: 9;left: 0;right: 0;bottom: 0;width: 100%;background: var(--secondary);color: var(--white);padding: 5px 0;}
+.mobile-section-footer a {display: block;font-size: 14px;padding: 6px 8px;color: currentColor;border: 1px solid currentColor;flex: 1 0 30.2%;}
+.mobile-section-footer.active {display: flex;gap: 0 5px;justify-content: space-between;text-align: center;padding: 5px;}
+
+/* #customModal */
+.theModal .modal-content {padding: 35px 34px;}
+.theModal .modal-dialog {max-width: 441px;}
+.theModal .modal-head-div {margin-bottom: 15px;}
+.theModal .modal-head {font-size: 35px;padding-bottom: 8px;}
+.theModal .modal-para {font-size: 18px;}
+.theModal .coldiv {padding-bottom: 18px;}
+.theModal .form-control {padding: 22px 15px;}
+.theModal .form-control:focus {box-shadow: unset;border-color: var(--primary);color: var(--primary);}
+.theModal .form-control:focus::placeholder {color: var(--primary);}
+.theModal .close {position: absolute;top: 0;right: 0;background: var(--primary);opacity: 1;}
+.theModal .close svg {width: 39px;height: 39px;}
+
+
+.menuIcon {display: none;}
+.menuIcon img {width: 50px;}
+
+@media (max-width: 1600px) {
+  
+}
+
+@media (max-width: 1380px) {
+
+}
+
+/* ipad Air and mini */
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 767px) {
+ 
+}
+
+/* All Keyframes */
+@keyframes slide-down {
+  from {opacity: 1;-webkit-transform: translateY(-100%);transform: translateY(-100%);}
+  to {opacity: 1;-webkit-transform: translateY(0);transform: translateY(0);}
+}
+
+@keyframes shadow-pulse{
+  0% {box-shadow: 0 0 0 0px rgba(170, 157, 82, 0.2);}
+  100% {box-shadow: 0 0 0 35px rgba(228, 198, 64, 0);}
+}
